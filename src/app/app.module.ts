@@ -21,6 +21,10 @@ import {TextFormatDirective} from './directives/text-format.directive';
 import {BlogDetailsComponent} from "./components/blog-details/blog-details.component";
 import { SelectizeComponent } from './components/selectize/selectize.component';
 import {AuthService} from "./services/auth.service";
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {AuthInterceptor} from "./services/auth.interceptor";
+
+
 
 @NgModule({
   declarations: [
@@ -48,7 +52,12 @@ import {AuthService} from "./services/auth.service";
   ],
   providers: [
     DataService,
-    AuthService
+    AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
