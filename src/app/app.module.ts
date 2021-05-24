@@ -20,6 +20,7 @@ import {FilterPipe} from './pipes/filter.pipe';
 import {TextFormatDirective} from './directives/text-format.directive';
 import {BlogDetailsComponent} from "./components/blog-details/blog-details.component";
 import { SelectizeComponent } from './components/selectize/selectize.component';
+import {AuthService} from "./services/auth.service";
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { SelectizeComponent } from './components/selectize/selectize.component';
     FormsModule
   ],
   providers: [
-    DataService
+    DataService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
