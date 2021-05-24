@@ -24,6 +24,7 @@ import {AuthService} from "./services/auth.service";
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {AuthInterceptor} from "./services/auth.interceptor";
 import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 
 
@@ -44,7 +45,8 @@ import { LoginComponent } from './components/login/login.component';
     FilterPipe,
     TextFormatDirective,
     SelectizeComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
