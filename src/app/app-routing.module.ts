@@ -6,6 +6,7 @@ import {BlogDetailsComponent} from "./components/blog-details/blog-details.compo
 import {BlogHomeComponent} from "./components/blog-home/blog-home.component";
 import {AuthGuard} from "./services/auth.guard";
 import {BlogComponent} from "./components/blog/blog.component";
+import {LoginComponent} from "./components/login/login.component";
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'blog/detail/:id',
     component: BlogDetailsComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
 ];
 

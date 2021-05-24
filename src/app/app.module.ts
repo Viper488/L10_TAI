@@ -23,6 +23,7 @@ import { SelectizeComponent } from './components/selectize/selectize.component';
 import {AuthService} from "./services/auth.service";
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {AuthInterceptor} from "./services/auth.interceptor";
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -42,7 +43,8 @@ import {AuthInterceptor} from "./services/auth.interceptor";
     BlogHomeComponent,
     FilterPipe,
     TextFormatDirective,
-    SelectizeComponent
+    SelectizeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
